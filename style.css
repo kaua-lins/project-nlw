@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image:url(assets/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%; /* altura da linha */
+}
+
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+   
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    /* Deixar a transição de quando passar o mouse por cima suave */
+    transition: transform .3s;
+}
+
+header div:hover {
+    /* Para colocar um efeito de transição */
+    transform: scale(1.1);
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;   
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+section ul li {
+    transition: transform .3s; /* Deixar a transição de quando passar o mouse por cima suave */
+}
+
+section ul li:hover {
+    transform: scale(1.1);  /* Para colocar um efeito de transição */
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.10px;
+    color: #A1A1AA;
+}
+
+ul {
+    list-style: none; /* para tirar as caracteristicas da lista */
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    border-radius: 50%;
+    width: 70px;
+    border: 2px solid #443E54
+}
+
+/* animation */
+
+header div /* onde eu quero aplicar a animação (div do cabeçalho) */ { 
+      animation: fromTop .7s 1s backwards; /* quanto a animação vai durar (7) e o delay da animação (2), para puxar os atributos do (from e to) usando o (backwards) */
+}
+
+main section /* onde eu quero aplicar a animação */ {
+    animation: fromBottom .7s backwards; /* animação de 7 segundos puxando todos os elemtnso do (from e to) */
+}
+
+/* time da animação */
+
+main section:nth-child(1) /* section filho nº1 */ {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) /* section filho nº2 */ {
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) /* section filho nº3 */ {
+    animation-delay: .6s;
+}
+
+@keyframes fromTop /* animação feita para cima */ {
+    from {
+        opacity: 0;
+        transform: translateY(-30px); /* a animação vai começar em -30 pixels */
+    }
+   
+    to {
+        opacity: 1;
+        transform: translateY(0)  /* e terminar em 0 pixels */
+    }
+    
+}
+
+@keyframes fromBottom /* animação feita para baixo */ {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* a animação vai começar em (30) pixels para baixo */
+    }
+   
+    to {
+        opacity: 1;
+        transform: translateY(0)  /* a animação terminar em 0 pixels voltando para a posição inicial (0) para cima */
+    }
+}
