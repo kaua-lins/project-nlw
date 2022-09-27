@@ -6,7 +6,7 @@
 
 Projeto construído no evento Next Level Week da Rocketseat.
 
-[Clique aqui para visualizar](https://kaua-lins.github.io/projeto-nlw)
+[Clique aqui para visualizar](https://kaua-lins.github.io/project-nlw)
 
 ## Tecnologias usadas
 
